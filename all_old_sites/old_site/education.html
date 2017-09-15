@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MJ5M88X');</script>
+    <!-- End Google Tag Manager -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link href="style/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/education.css">
+	<title> Демонстрація | MASTER бухгалтерія</title>
+	<script>
+            function sendform_1(){
+            var UTM = window.location.search + ' ' + document.referrer;
+            var frm = $('#myform1');
+            var form = {
+            MODE: "QUEST",
+            PHONE: frm.children("[name=phone]").val(),
+            EMAIL: frm.children("[name=email]").val(),
+            FIO: frm.children("[name=name]").val(),
+            POST: "",
+            COMPANY_NAME: "",
+            TYPE: "",
+            COMMENT: frm.children("[id=comment]").val(),
+            COUNTRY:"",
+            MAILTEMPLATE:"_MASTER_UNI_CONFIRM",
+            SOURCE:"80",
+            MAILTEAM:"odinec@it.ua",
+            UTM: UTM,
+            SERVICE:"MASTER",
+            PRODUCT:"MRD"
+            };
+            send(form);};  
+        
+            function send(data){
+            $.ajax({
+            url: "https://it.it.ua/ws/webservice.asmx/ExecuteEx?pureJSON=",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({
+            calcId: "_CLOUD.REGISTER",
+            ticket: "",
+            args: JSON.stringify({
+            form: data
+            })
+            }),
+            success: function(d){
+                $('.close').click(); 
+                jQuery('#spasibo').modal('toggle');
+            }})};   
+        
+
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ5M88X"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v2.10&appId=180730259074867";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="modal fade" id="modal2">
+        <div class="modal-dialog">
+            <div class="modal-content modal-setting">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">Будь ласка, заповніть форму</h4>
+              </div>
+              <div class="modal-body">
+                <form class="demo_form" action="javascript:void(0);"  id="myform1" name="myform1"> 
+                    <input type="text" placeholder="Ваше ім'я" name="name" id="name">
+                    <input type="E-mail" placeholder="Контаткний Email" name="email" id="email">
+                    <input type="text" placeholder="Контактний телефон" name="phone" id="phone">
+                    <textarea id="comment" cols="2" rows="4" placeholder="Ваше питання" name="textarea"></textarea>
+                    <a href="#" class="btn_place" style="background-color: #cc2229;" onclick="sendform_1()">Відправити</a>
+                </form>
+              </div>
+            </div>
+         </div>
+    </div>
+    
+    <div class="modal fade" id="spasibo">
+        <div class="modal-dialog">
+            <div class="modal-content modal-setting">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">Дякую за звернення! Наші менеджери зв'яжуться з Вами найближчим часом</h4>
+              </div>
+            </div>
+         </div>
+    </div>
+
+	<header>
+	<a href="/">
+		<span class="logo"></span>
+	</a>
+		<nav>
+			<ul class="header_menu">
+				<li><a class="functional" href="#fun_h2">Функціонал</a></li>
+				<li><a class="price" href="pricing.html">Тарифи</a></li>
+				<li><a class="school" href="education.html">Демонстрація</a></li>
+				<li><a class="update" href="updates.html">Оновлення</a></li>
+				<li><a href="#">УМОВИ</a></li>
+			</ul>
+		</nav>
+		<div class="contact_wrap">
+			<a href="tel:+380443334447"><div class="contact"></div></a>
+			<a data-toggle="modal" data-target="#modal2" href="#" class="open_modal_2"><div class="mail">info@masterbuh.com</div></a>
+		</div>
+	</header>
+    <div>
+        <div class="banner-shedule-section">
+            <div class="banner-wrap">
+                <img src="images/webinar-banner.png" alt="">
+            </div>
+            <div class="shedule-wrap">
+            	<img id='logo' src="images/bux-logo-small.png" alt="">
+            	<!-- <div class="shedule-inner">
+            		calendar
+            	</div> -->
+            </div>
+        </div>
+    </div>
+    <section class="slider-wrap">
+    	<div class="clear"></div>
+    	<div class="heading-wrap">
+    		<h2 class="text-center uppercase">Відеоуроки</h2>
+    	</div>
+    	<div class="clear"></div>
+    	<div class="videos-wrap">
+    		<div class="video-item">
+    			<div class="video-inner">
+	    			<div class="video-image bux-cream-bg"></div>
+	    			<div class="video-title">Назва відео</div>
+    			</div>
+    		</div>
+    		<div class="video-item">
+    			<div class="video-inner">
+	    			<div class="video-image bux-cream-bg"></div>
+	    			<div class="video-title">Назва відео</div>
+    			</div>
+    		</div>
+    		<div class="video-item">
+    			<div class="video-inner">
+	    			<div class="video-image bux-cream-bg"></div>
+	    			<div class="video-title">Назва відео</div>
+    			</div>
+    		</div>
+    		<div class="video-item">
+    			<div class="video-inner">
+	    			<div class="video-image bux-cream-bg"></div>
+	    			<div class="video-title">Назва відео</div>
+    			</div>
+    		</div>
+    		<div class="video-item">
+    			<div class="video-inner">
+	    			<div class="video-image bux-cream-bg"></div>
+	    			<div class="video-title">Назва відео</div>
+    			</div>
+    		</div>
+    		<div class="video-item">
+    			<div class="video-inner">
+	    			<div class="video-image bux-cream-bg"></div>
+	    			<div class="video-title">Назва відео</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="clear"></div>
+    	<a href="https://www.youtube.com/channel/UC1cvlTF-n1Ak9wRev28F10A/" target="_blank" rel="nofollow" class="main_btn main_btn_MAIN">Усі відеоуроки</a>
+    </section>
+    <section class="slider-wrap">
+    	<div class="clear"></div>
+   		<div class="heading-wrap">
+   			<h2 class="text-center uppercase">Вебінари</h2>
+   		</div>
+   		<div class="clear"></div>
+   		<div class="webinars-wrap">
+   			<div class="webinar">
+   				<div class="webinar-inner">
+   					<div class="webinar-meta">
+   						<span class="webinar-meta-month uppercase bux-red thin">
+   							Вересень
+   						</span>
+   						<div class="clear"></div>
+   						<div class="bux-red-bg webinar-date-wrap">
+   							<span class="day-circle bux-red">21</span>
+   							<span class="day-title uppercase">ЧТ</span>
+   						</div>
+   						<div class="webinar-title">"MASTER Бухгалетрія: огляд можливостей"</div>
+   						
+   					</div>  
+   					<div class="webinar-description">
+   						Короткий опис вебінару
+   					</div> 					
+   				</div>
+   			</div>
+   			<div class="webinar">
+   				<div class="webinar-inner">
+   					<div class="webinar-meta">
+   						<span class="webinar-meta-month uppercase bux-red thin">
+   							Вересень
+   						</span>
+   						<div class="clear"></div>
+   						<div class="bux-red-bg webinar-date-wrap">
+   							<span class="day-circle bux-red">21</span>
+   							<span class="day-title uppercase">ЧТ</span>
+   						</div>
+   						<div class="webinar-title">"MASTER Бухгалетрія: огляд можливостей"</div>
+   						
+   					</div>  
+   					<div class="webinar-description">
+   						Короткий опис вебінару
+   					</div> 					
+   				</div>
+   			</div>
+   			<div class="webinar">
+   				<div class="webinar-inner">
+   					<div class="webinar-meta">
+   						<span class="webinar-meta-month uppercase bux-red thin">
+   							Вересень
+   						</span>
+   						<div class="clear"></div>
+   						<div class="bux-red-bg webinar-date-wrap">
+   							<span class="day-circle bux-red">21</span>
+   							<span class="day-title uppercase">ЧТ</span>
+   						</div>
+   						<div class="webinar-title">"MASTER Бухгалетрія: огляд можливостей"</div>
+   						
+   					</div>  
+   					<div class="webinar-description">
+   						Короткий опис вебінару
+   					</div> 					
+   				</div>
+   			</div>
+   			<div class="webinar">
+   				<div class="webinar-inner">
+   					<div class="webinar-meta">
+   						<span class="webinar-meta-month uppercase bux-red thin">
+   							Вересень
+   						</span>
+   						<div class="clear"></div>
+   						<div class="bux-red-bg webinar-date-wrap">
+   							<span class="day-circle bux-red">21</span>
+   							<span class="day-title uppercase">ЧТ</span>
+   						</div>
+   						<div class="webinar-title">"MASTER Бухгалетрія: огляд можливостей"</div>
+   						
+   					</div>  
+   					<div class="webinar-description">
+   						Короткий опис вебінару
+   					</div> 					
+   				</div>
+   			</div>
+   			<div class="webinar">
+   				<div class="webinar-inner">
+   					<div class="webinar-meta">
+   						<span class="webinar-meta-month uppercase bux-red thin">
+   							Вересень
+   						</span>
+   						<div class="clear"></div>
+   						<div class="bux-red-bg webinar-date-wrap">
+   							<span class="day-circle bux-red">21</span>
+   							<span class="day-title uppercase">ЧТ</span>
+   						</div>
+   						<div class="webinar-title">"MASTER Бухгалетрія: огляд можливостей"</div>
+   						
+   					</div>  
+   					<div class="webinar-description">
+   						Короткий опис вебінару
+   					</div> 					
+   				</div>
+   			</div>
+   			<div class="webinar">
+   				<div class="webinar-inner">
+   					<div class="webinar-meta">
+   						<span class="webinar-meta-month uppercase bux-red thin">
+   							Вересень
+   						</span>
+   						<div class="clear"></div>
+   						<div class="bux-red-bg webinar-date-wrap">
+   							<span class="day-circle bux-red">21</span>
+   							<span class="day-title uppercase">ЧТ</span>
+   						</div>
+   						<div class="webinar-title">"MASTER Бухгалетрія: огляд можливостей"</div>
+   						
+   					</div>  
+   					<div class="webinar-description">
+   						Короткий опис вебінару
+   					</div> 					
+   				</div>
+   			</div>
+   		</div>
+    </section>
+	 <footer>
+	 	<div class="wrap_nav_copyright">
+	 	<nav>
+	 		<ul class="footer_menu">
+	 			<li><a href="updates.html">Список оновлень</a></li>
+	 		</ul>
+	 	</nav>
+	 	<div class="social_media">
+                 <a href="https://www.facebook.com/masterbuh" target="_blank">
+	 				<span class="fb"></span>
+	 			</a>
+	 			<a href="https://www.youtube.com/channel/UC1cvlTF-n1Ak9wRev28F10A/" target="_blank">
+	 				<span class="utube"></span>
+                </a>
+	 		</div>
+	 	<p class="copyright">&copy; 2017. Master Бухгалтерія. Всі права захищено</p>
+	 	</div>
+
+<div class="fb-frame">
+        <div class="fb-page" data-href="https://www.facebook.com/masterbuh" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/masterbuh" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/masterbuh">Master Бухгалтерія</a></blockquote></div>
+    </div>
+
+	 	<div class="social_media-contacts_wrap">
+            <p class="contacts_text"><a href="tel:+380443334447">Тел: +38 044 333 444 7</a></p>
+            <p class="contacts_text"><a data-toggle="modal" data-target="#modal2" href="#" class="open_modal_2">info@masterbuh.com</a></p>
+	 		<p class="contacts_text">м. Київ, проспект Бажана, 14А</p>
+	 	</div>
+	 </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jQuery.js"></script>
+	<script>
+        $(function () {
+            var k = jQuery.noConflict(); 
+                function equalHeight(group) { 
+                    var tallest = 0; 
+                    
+                    group.each(function() { 
+                        thisHeight = k(this).height(); 
+                    
+                        if(thisHeight > tallest) { 
+                            tallest = thisHeight; 
+                        } 
+                    }); 
+                    
+                    group.height(tallest); 
+                }       
+            k(document).ready(function(){
+                equalHeight(k(".kolum")); 
+                equalHeight(k(".kolon-tarif"));
+                var options = {
+                	slidesToShow: 4,
+                	prevArrow: '<span class="bux-prev"></span>',
+                	nextArrow: '<span class="bux-next"></span>',
+                	responsive: [
+                		{
+      						breakpoint: 1165,
+      						settings: {
+      					  		slidesToShow: 3
+      						}
+    					},
+    					{
+      						breakpoint: 875,
+      						settings: {
+      					  		slidesToShow: 2
+      						}
+    					},
+    					{
+      						breakpoint: 600,
+      						settings: {
+      					  		slidesToShow: 1,
+      					  		arrows: false,
+                      autoplay: true,
+                      speed: 1500
+      						}
+    					}
+                	]
+                };
+
+                $('.webinars-wrap').slick(options);
+                $('.videos-wrap').slick(options);
+            });
+        });
+        
+    </script>
+</body>
+</html>

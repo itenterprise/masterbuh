@@ -1,0 +1,262 @@
+/* EDUCATION PAGE */
+.bux-cream-bg {
+    background-color: #E7E2E6; 
+}
+
+.bux-red-bg {
+    background-color: #CE1B22; 
+}
+
+.bux-red {
+    color: #CE1B22;
+}
+
+.bux-cream {
+    color: #E7E2E6;
+}
+.demo-btns {
+    margin-top: 30px;
+}
+.demo-btns button {
+        display: inline-block;
+    margin: 5px 15px;
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 36.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.webinar-title:hover {
+    text-decoration: underline;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-shedule-section {
+    min-height: 450px;
+    display: table;
+    width: 100%;
+    margin-top: 72px;
+}
+
+.banner-shedule-section > div {
+    height: 100%;
+}
+
+.banner-wrap, .shedule-wrap {
+    display: table-cell;
+    width: 50%;
+    position: relative;
+}
+
+.banner-wrap {
+    background-color: #CE1B22;
+}
+.banner-wrap img {
+        margin: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+.shedule-wrap {
+    background-color: #E7E2E6;
+    position: relative;
+}
+.fb-frame {
+    width: 30%;
+    min-width: 250px;
+}
+
+.shedule-wrap img#logo {
+    max-width: 294px;
+    margin: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.shedule-inner {
+    margin-left: 10%;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.heading-wrap {
+        min-width: 20%;
+    padding: 0 60px;
+    float: left;
+    border-bottom: 4px solid #CE1B22;
+}
+
+.heading-wrap h2 {
+    color: black;
+    text-align: left;
+}
+
+.slider-wrap {
+    margin-top: 60px;
+    margin-bottom: 90px;
+}
+ 
+.webinar-inner {
+    border: 1px solid #CE1B22;
+    max-width: 80%;
+    margin: auto;
+}
+a.main_btn_MAIN {
+    text-decoration: none !important;
+    color: white !important;
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+    float: right;
+    margin-right: 10%;
+    margin-top: 0;
+}
+.webinar-meta, .webinar-description {
+    padding: 15px;
+}
+.webinars-wrap, .videos-wrap {
+    margin: 60px auto;
+    max-width: 85%;
+}
+.video-inner {
+    max-width: 80%;
+    margin: auto;
+    display: block;
+    text-decoration: none !important;
+}
+.video-image {
+/*  height: 200px;*/
+    margin-bottom: 10px;
+        background-size: cover;
+    background-position: center;
+}
+.video-title {
+        font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none !important;
+}
+.webinar-meta-month {
+    color: #CE1B22;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.webinar-meta { 
+}
+
+.bux-prev {
+    background-image: url('../images/prev.PNG');
+    left: -45px;
+}
+
+.bux-next {
+    background-image: url('../images/next.PNG');
+    right: -45px;
+}
+
+.bux-prev, .bux-next {
+    width: 30px;
+    height: 40px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.webinar-description {
+    background-color: #E7E2E6;
+    color: black;
+    min-height: 100px;
+}
+
+.webinar-date-wrap {
+    display: inline-block;
+    padding: 5px;
+}
+
+.day-circle {
+        display: block;
+    font-size: 16px;
+    font-weight: bold;
+    background: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.webinar-title {
+        display: inline-block;
+        font-weight: bold;
+    max-width: 70%;
+    vertical-align: top;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.day-title {
+        color: white;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+}
+
+/* end EDUCATION PAGE */
+
+@media (max-width: 959px) {
+    .banner-shedule-section {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 790px) {
+    .banner-shedule-section {
+        margin-top: 100px;
+    }
+    .banner-shedule-section, .banner-wrap, .shedule-wrap {
+    display: block;
+    min-height: 380px;
+    width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .heading-wrap {
+        margin: auto;
+        float: none;
+    }
+    a.main_btn_MAIN {
+        float: none;
+    margin: auto;
+    display: block;
+    max-width: 250px;
+    }
+}

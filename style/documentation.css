@@ -1,0 +1,64 @@
+/* PRICING */
+
+
+.documentation-section{
+    margin-top: 70px;
+    padding: 0;
+    margin-bottom: 0;
+}
+.documentation-section  p{
+    text-align: left;
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 0px 20px;
+    color: #000;
+}
+#documentation-dowloand{
+    width: 30%;
+    min-height: 700px;
+    background-color: #e7e2e6;
+    float: left;
+    padding-top: 40px;
+}
+#documentation-text{
+    width: 70%;
+    min-height: 700px;
+    float: right;
+}
+footer{
+    margin-top: 0;
+}
+#documentation-text h2{
+    color: #000;
+    text-align: left;
+    margin-left: 20px;
+}
+#documentation-dowloand a{
+        color: #000;
+    width: calc(100% - 40px);
+    height: auto;
+    padding-left: 54px;
+    background-image: url(../images/dowl.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    min-height: 65px;
+    background-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 60px;
+}
+#documentation-dowloand a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+    
+}
+
+@media (max-width: 760px) {
+	
+}
